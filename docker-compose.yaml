@@ -9,6 +9,8 @@ services:
     ports:
       # node.js/React
       - '8080:8080'
+      # node.js/storybook
+      - '6006:6006'
     volumes:
       - './frontend/app:/home/node/ex-commerce-with-nextjs/frontend/app'
     tty: true
