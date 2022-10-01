@@ -10,6 +10,6 @@ services:
       # node.js/React
       - '8080:8080'
     volumes:
-      - './frontend/app:/home/node/failure-story/frontend/app'
+      - './frontend/app:/home/node/ex-commerce-with-nextjs/frontend/app'
     tty: true
     stdin_open: true
