@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  frontend:
+    build: 
+      context: .
+      dockerfile: ./frontend/Dockerfile
+    container_name: react_container
+    ports:
+      # node.js/React
+      - '8080:8080'
+    volumes:
+      - './frontend/app:/home/node/failure-story/frontend/app'
+    tty: true
+    stdin_open: true
