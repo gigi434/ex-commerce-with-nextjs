@@ -7,6 +7,8 @@ services:
       dockerfile: ./frontend/Dockerfile
     container_name: react_container
     ports:
+      # node.js/json-server
+      - '8000:8000'
       # node.js/React
       - '8080:8080'
       # node.js/storybook
