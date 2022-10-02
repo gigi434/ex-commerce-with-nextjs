@@ -7,13 +7,24 @@ services:
       dockerfile: ./frontend/Dockerfile
     container_name: react_container
     ports:
-      # node.js/json-server
-      - '8000:8000'
       # node.js/React
       - '8080:8080'
       # node.js/storybook
       - '6006:6006'
     volumes:
       - './frontend/app:/home/node/ex-commerce-with-nextjs/frontend/app'
+    tty: true
+    stdin_open: true
+
+  backend:
+    build: 
+      context: .
+      dockerfile: ./backend/Dockerfile
+    container_name: json-server_container
+    ports:
+      # node.js/json-server
+      - '8000:8000'
+    volumes:
+      - './backend/app:/home/node/ex-commerce-with-nextjs/backend/app'
     tty: true
     stdin_open: true
