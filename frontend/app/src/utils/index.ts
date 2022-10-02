@@ -13,7 +13,6 @@ export const fetcher = async (
         )
         throw error
     }
-
+    
     return res.json()
-
 }
