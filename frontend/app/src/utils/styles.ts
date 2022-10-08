@@ -10,7 +10,8 @@ export type AppTheme = typeof theme
 // keyof: オブジェクト型のプロパティ名(key名)を取得し、「型」に対して使用します。
 // typeof: 実際の値を型に変換し、「変数」に対して使用します。
 // 二つを組み合わせると型があるオブジェクトに対して使用するとプロパティの文字列型になる
-// 例）SpaceThemeKeys = '0px' | '8px' | ...
+// typeof theme.color = { primary: string , primaryDark: string, ...rest }
+// keyof typeof theme.color = 'primary' | 'primaryDark' | ...
 type SpaceThemeKeys = keyof typeof theme.space
 type ColorThemeKeys = keyof typeof theme.colors
 type FontSizeThemeKeys = keyof typeof theme.fontSizes
